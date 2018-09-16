@@ -24,7 +24,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginLeft="50dp"
         android:gravity="top"
-        android:text="Foody"/>
+        android:text="Imarsha Food" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->

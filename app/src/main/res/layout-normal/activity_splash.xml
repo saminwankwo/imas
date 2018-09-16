@@ -3,7 +3,7 @@
              android:layout_width="match_parent"
              android:layout_height="match_parent"
              android:background="#0099cc"
-             tools:context="com.example.guanzhuli.foody.StartingPage.SplashActivity">
+    tools:context=".StartingPage.SplashActivity">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
@@ -24,7 +24,7 @@
               android:layout_marginTop="50dp"
               android:layout_marginLeft="50dp"
               android:gravity="top"
-              android:text="Foody"/>
+        android:text="Imarsha food" />
 
     <!-- This FrameLayout insets its children based on system windows using
          android:fitsSystemWindows. -->

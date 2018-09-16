@@ -1,33 +1,33 @@
 package com.example.root.imas.HomePage;
 
-import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
-import android.view.View;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.EditText;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.root.imas.CartPage.CartActivity;
-import com.example.root.imas.HomePage.fragment.*;
+import com.example.root.imas.HomePage.fragment.HelpFragment;
+import com.example.root.imas.HomePage.fragment.HistoryFragment;
+import com.example.root.imas.HomePage.fragment.HomeFragment;
+import com.example.root.imas.HomePage.fragment.ProfileFragment;
+import com.example.root.imas.HomePage.fragment.TrackFragment;
 import com.example.root.imas.R;
 import com.example.root.imas.StartingPage.SplashActivity;
-import com.example.root.imas.controller.DBManipulation;
 import com.example.root.imas.controller.SPManipulation;
 import com.example.root.imas.controller.ShoppingCartItem;
 import com.facebook.FacebookSdk;
@@ -89,7 +89,7 @@ public class HomePageActivity extends AppCompatActivity
     // Haven'v finished function
     private void setCity(){
         if (City == null){
-            City = "Lagos";
+            City = "banglore";
         }
     }
 
@@ -101,11 +101,11 @@ public class HomePageActivity extends AppCompatActivity
         pDialog.setMessage("Loading...");
         pDialog.setCancelable(false);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        cartNumber = (TextView) findViewById(R.id.cart_item_number);
+        FloatingActionButton fab = findViewById(R.id.fab);
+        cartNumber = findViewById(R.id.cart_item_number);
         cartNumber.setText(String.valueOf(ShoppingCartItem.getInstance(this).getSize()));
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,18 +114,18 @@ public class HomePageActivity extends AppCompatActivity
             }
         });
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         View navHeaderView = navigationView.inflateHeaderView(R.layout.nav_header_main);
-        TextView header_mobile = (TextView) navHeaderView.findViewById(R.id.nav_mobile);
-        TextView header_name = (TextView) navHeaderView.findViewById(R.id.nav_name);
+        TextView header_mobile = navHeaderView.findViewById(R.id.nav_mobile);
+        TextView header_name = navHeaderView.findViewById(R.id.nav_name);
         header_name.setText(SPManipulation.getInstance(this).getName());
         header_mobile.setText(SPManipulation.getInstance(this).getEmail());
 
@@ -137,7 +137,7 @@ public class HomePageActivity extends AppCompatActivity
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -220,7 +220,7 @@ public class HomePageActivity extends AppCompatActivity
                 break;
         }
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }

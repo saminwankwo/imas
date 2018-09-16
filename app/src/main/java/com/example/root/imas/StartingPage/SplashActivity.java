@@ -6,10 +6,10 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.content.res.Configuration;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -216,18 +216,18 @@ public class SplashActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         View view = this.getWindow().getDecorView();
-        ImageView imageView = (ImageView) view.findViewById(R.id.splash_background);
-        TextView textView = (TextView) view.findViewById(R.id.sign_in);
+        ImageView imageView = view.findViewById(R.id.splash_background);
+        TextView textView = view.findViewById(R.id.sign_in);
         int orientation = getResources().getConfiguration().orientation;
         if(orientation == Configuration.ORIENTATION_LANDSCAPE) {
             Toast.makeText(SplashActivity.this, "Land", Toast.LENGTH_LONG).show();
             // view.setBackgroundResource (R.drawable.background_land);
-            textView.setText("Sign in Land");
+            textView.setText("Sign in");
             Log.i("button infor", textView.getText().toString());
         } else {
             Toast.makeText(SplashActivity.this, "Port", Toast.LENGTH_LONG).show();
             // view.setBackgroundResource (R.drawable.background_port);
-            textView.setText("Sign in Port");
+            textView.setText("Sign in");
             Log.i("button infor", textView.getText().toString());
         }
     }
