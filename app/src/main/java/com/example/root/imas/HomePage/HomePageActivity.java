@@ -89,7 +89,7 @@ public class HomePageActivity extends AppCompatActivity
     // Haven'v finished function
     private void setCity(){
         if (City == null){
-            City = "banglore";
+            City = "Lagos";
         }
     }
 

@@ -109,7 +109,7 @@ public class SignInFragment extends Fragment implements GoogleApiClient.OnConnec
                 mLoginButton.performClick();
             }
         });
-        mLoginButton = (LoginButton) view.findViewById(R.id.login_button);
+//        mLoginButton = (LoginButton) view.findViewById(R.id.login_button);
         mLoginButton = new LoginButton(getContext());
         mLoginButton.setReadPermissions("email");
         // If using in a fragment
