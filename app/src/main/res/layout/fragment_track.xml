@@ -1,127 +1,168 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-              android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             tools:context=".HomePage.fragment.TrackFragment">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context=".HomePage.fragment.TrackFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <LinearLayout
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-                android:paddingLeft="@dimen/horizontal_padding"
-                android:layout_weight="1.3"
-                android:text="Search:"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"/>
-        <EditText
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3"
+                android:paddingLeft="@dimen/horizontal_padding"
+                android:text="Search:" />
+
+            <EditText
                 android:id="@+id/track_edit_search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="4"
-                android:hint="Order Number"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-        <TextView
-                android:clickable="true"
+                android:hint="Order Number" />
+
+            <TextView
                 android:id="@+id/track_search"
-                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/activity_horizontal_margin"
                 android:layout_weight="1.2"
-                android:textColor="@color/icons"
-                android:text="search"
                 android:background="@drawable/badge_rec"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <LinearLayout
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:paddingBottom="@dimen/activity_vertical_margin"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="search"
+                android:textColor="@color/icons" />
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <View
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <View
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:layout_weight="1"
                 android:layout_marginTop="8dp"
-                android:background="@color/colorPrimary"/>
-    </LinearLayout>
-    <LinearLayout
+                android:layout_weight="1"
+                android:background="@color/colorPrimary" />
+        </LinearLayout>
+
+        <LinearLayout
             android:id="@+id/track_detail_block"
-            android:orientation="vertical"
-            android:layout_width="match_parent" android:layout_height="wrap_content">
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/horizontal_padding"
-            android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-                android:text="Order Number:"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/horizontal_padding"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/track_id"
-                android:layout_weight="2"
-                android:text="1234"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/horizontal_padding"
-            android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-                android:text="Total:"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/horizontal_padding"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/track_total"
-                android:textColor="@color/colorPrimaryDark"
-                android:layout_weight="2"
-                android:text="12.39"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/horizontal_padding"
-            android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-                android:text="Date:"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/horizontal_padding"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-        <TextView
-                android:id="@+id/track_date"
-                android:layout_weight="2"
-                android:text="2016-12-08 20:39:10"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="@dimen/horizontal_padding"
-            android:layout_width="match_parent" android:layout_height="wrap_content">
-        <TextView
-                android:text="Status:"
-                android:layout_weight="1"
-                android:layout_marginRight="@dimen/horizontal_padding"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-        <TextView
-                android:layout_weight="2"
-                android:layout_width="0dp" android:layout_height="wrap_content"/>
-    </LinearLayout>
-    <ImageView
-            android:id="@+id/track_image_status"
-            android:paddingTop="@dimen/activity_vertical_margin"
-            android:src="@mipmap/pack"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"/>
-    <TextView
-            android:id="@+id/track_status"
-            android:gravity="center"
-            android:textSize="28sp"
-            android:text="Packing"
-            android:layout_width="match_parent" android:layout_height="wrap_content"/>
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_padding"
+                android:orientation="horizontal">
 
-</LinearLayout>
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/horizontal_padding"
+                    android:layout_weight="1"
+                    android:text="Order Number:" />
+
+                <TextView
+                    android:id="@+id/track_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="1234" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/horizontal_padding"
+                    android:layout_weight="1"
+                    android:text="Total:" />
+
+                <TextView
+                    android:id="@+id/track_total"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="12.39"
+                    android:textColor="@color/colorPrimaryDark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/horizontal_padding"
+                    android:layout_weight="1"
+                    android:text="Date:" />
+
+                <TextView
+                    android:id="@+id/track_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="2016-12-08 20:39:10" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/horizontal_padding"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/horizontal_padding"
+                    android:layout_weight="1"
+                    android:text="Status:" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/track_image_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:src="@mipmap/pack" />
+
+            <TextView
+                android:id="@+id/track_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Packing"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
